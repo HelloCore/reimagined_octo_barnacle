@@ -19,7 +19,7 @@ class _LauncherPageState extends State<LauncherPage> {
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             return FadeThroughTransition(
               animation: animation,
-              secondaryAnimation: secondaryAnimation,
+              secondaryAnimation: AlwaysStoppedAnimation(0),
               child: child,
             );
           }));
