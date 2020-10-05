@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:reimagined_octo_barnacle/pages/second_page.dart';
 
@@ -47,6 +48,43 @@ class _MainPageState extends State<MainPage> {
                           }));
                     },
                     title: Text('Fade'),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  SecondPage(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            return SharedAxisTransition(
+                              animation: animation,
+                              secondaryAnimation: secondaryAnimation,
+                              child: child,
+                              transitionType:
+                                  SharedAxisTransitionType.horizontal,
+                            );
+                          }));
+                    },
+                    title: Text('SharedAxisTransitionType.horizontal'),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  SecondPage(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            return SharedAxisTransition(
+                              animation: animation,
+                              secondaryAnimation: secondaryAnimation,
+                              child: child,
+                              transitionType: SharedAxisTransitionType.scaled,
+                            );
+                          }));
+                    },
+                    title: Text('SharedAxisTransitionType.scaled'),
                   ),
                 ],
               ),
