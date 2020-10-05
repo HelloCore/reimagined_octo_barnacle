@@ -14,31 +14,45 @@ class _MainPageState extends State<MainPage> {
         title: Text('Animations'),
       ),
       body: Container(
-          child: ListView(
-        children: [
-          Hero(
-            tag: 'hero-fade',
-            child: Material(
-              child: ListTile(
-                onTap: () {
-                  Navigator.of(context).push(PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) =>
-                          SecondPage(
-                            tag: 'hero-fade',
-                          ),
-                      transitionsBuilder:
-                          (context, animation, secondaryAnimation, child) {
-                        return FadeTransition(
-                          opacity: animation,
-                          child: child,
-                        );
-                      }));
-                },
-                title: Text('Fade'),
+          child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Hero(
+                tag: 'main-hero',
+                child: Material(
+                    child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.greenAccent,
+                  ),
+                ))),
+            Expanded(
+              child: ListView(
+                children: [
+                  ListTile(
+                    onTap: () {
+                      Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  SecondPage(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            return FadeTransition(
+                              opacity: animation,
+                              child: child,
+                            );
+                          }));
+                    },
+                    title: Text('Fade'),
+                  ),
+                ],
               ),
             ),
-          )
-        ],
+          ],
+        ),
       )),
     );
   }
