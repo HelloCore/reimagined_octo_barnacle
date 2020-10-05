@@ -86,6 +86,24 @@ class _MainPageState extends State<MainPage> {
                     },
                     title: Text('SharedAxisTransitionType.scaled'),
                   ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  SecondPage(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            return SharedAxisTransition(
+                              animation: animation,
+                              secondaryAnimation: secondaryAnimation,
+                              child: child,
+                              transitionType: SharedAxisTransitionType.vertical,
+                            );
+                          }));
+                    },
+                    title: Text('SharedAxisTransitionType.vertical'),
+                  ),
                 ],
               ),
             ),
