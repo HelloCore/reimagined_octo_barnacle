@@ -122,6 +122,60 @@ class _MainPageState extends State<MainPage> {
                           }));
                     },
                     title: Text('FlutterTextAnimation.Rotate'),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  ThirdPage(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            return SharedAxisTransition(
+                              animation: animation,
+                              secondaryAnimation: secondaryAnimation,
+                              child: child,
+                              transitionType: SharedAxisTransitionType.vertical,
+                            );
+                          }));
+                    },
+                    title: Text('FlutterTextAnimation.Fade'),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  ThirdPage(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            return SharedAxisTransition(
+                              animation: animation,
+                              secondaryAnimation: secondaryAnimation,
+                              child: child,
+                              transitionType: SharedAxisTransitionType.vertical,
+                            );
+                          }));
+                    },
+                    title: Text('FlutterTextAnimation.Typer'),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  ThirdPage(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            return SharedAxisTransition(
+                              animation: animation,
+                              secondaryAnimation: secondaryAnimation,
+                              child: child,
+                              transitionType: SharedAxisTransitionType.vertical,
+                            );
+                          }));
+                    },
+                    title: Text('FlutterTextAnimation.Typewriter'),
                   )
                 ],
               ),
