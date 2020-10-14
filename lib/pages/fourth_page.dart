@@ -7,7 +7,7 @@ class FourthPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white10,
       appBar: AppBar(
-        title: Text('ThirdPage'),
+        title: Text('FourthPage'),
       ),
       body: Center(
         child: Container(

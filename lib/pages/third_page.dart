@@ -13,7 +13,7 @@ class ThirdPage extends StatelessWidget {
           child: Hero(
             tag: 'main-hero',
             child: Container(
-              width: 300,
+              width: 350,
               height: 300,
               color: Colors.orange.shade500,
               child: _createTextAnimationRotate(),

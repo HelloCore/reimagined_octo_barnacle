@@ -1,5 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:reimagined_octo_barnacle/pages/fifth_page.dart';
 import 'package:reimagined_octo_barnacle/pages/fourth_page.dart';
 import 'package:reimagined_octo_barnacle/pages/second_page.dart';
 
@@ -148,7 +149,7 @@ class _MainPageState extends State<MainPage> {
                       Navigator.of(context).push(PageRouteBuilder(
                           pageBuilder:
                               (context, animation, secondaryAnimation) =>
-                                  ThirdPage(),
+                                  FifthPage(),
                           transitionsBuilder:
                               (context, animation, secondaryAnimation, child) {
                             return SharedAxisTransition(
