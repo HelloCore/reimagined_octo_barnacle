@@ -10,16 +10,20 @@ class FourthPage extends StatelessWidget {
         title: Text('ThirdPage'),
       ),
       body: Center(
-        child: SizedBox(
-          width: 300,
-          child: FadeAnimatedTextKit(
-            text: ['Hello', 'Hello!!', 'Hello Hello Core!!!'],
-            textStyle: TextStyle(
-              fontSize: 40.0,
-              fontWeight: FontWeight.bold,
+        child: Container(
+          height: 250,
+          color: Colors.greenAccent,
+          child: SizedBox(
+            width: 300,
+            child: FadeAnimatedTextKit(
+              text: ['Hello', 'Hello!!', 'Hello Hello Core!!!'],
+              textStyle: TextStyle(
+                fontSize: 40.0,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+              alignment: AlignmentDirectional.topStart,
             ),
-            textAlign: TextAlign.center,
-            alignment: AlignmentDirectional.topStart,
           ),
         ),
       ),
