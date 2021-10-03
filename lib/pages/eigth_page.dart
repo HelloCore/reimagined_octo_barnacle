@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
-class SeventhPage extends StatelessWidget {
+class EigthPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white10,
       appBar: AppBar(
-        title: Text('Seven'),
+        title: Text('Eigth'),
       ),
       body: Center(
         child: Container(
@@ -15,7 +15,7 @@ class SeventhPage extends StatelessWidget {
           color: Colors.blue.shade500,
           child: SizedBox(
             width: 300,
-            child: WavyAnimatedTextKit(
+            child: ColorizeAnimatedTextKit(
               text: [
                 "Discipline is the best tool",
                 "Design first, then code",
@@ -26,6 +26,12 @@ class SeventhPage extends StatelessWidget {
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,
               ),
+              colors: [
+                Colors.redAccent,
+                Colors.greenAccent,
+                Colors.blueAccent,
+                Colors.yellowAccent,
+              ],
             ),
           ),
         ),
