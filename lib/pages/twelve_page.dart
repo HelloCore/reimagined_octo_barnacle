@@ -11,7 +11,7 @@ class _TwelevePageState extends State<TwelevePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ten'),
+        title: Text('Twelve'),
       ),
       body: Center(
         child: Column(
