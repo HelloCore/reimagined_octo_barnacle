@@ -12,7 +12,9 @@ class _NinethPageState extends State<NinethPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Nine'),
+      ),
       body: Container(
         decoration: BoxDecoration(
           color: Colors.yellow,
