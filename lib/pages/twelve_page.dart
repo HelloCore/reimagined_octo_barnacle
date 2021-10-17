@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
-class TenPage extends StatefulWidget {
+class TwelevePage extends StatefulWidget {
   @override
-  State<TenPage> createState() => _TenPageState();
+  _TwelevePageState createState() => _TwelevePageState();
 }
 
-class _TenPageState extends State<TenPage> {
+class _TwelevePageState extends State<TwelevePage> {
   bool animated = false;
 
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -42,7 +40,7 @@ class _TenPageState extends State<TenPage> {
                       letterSpacing: 1,
                     ),
               duration: Duration(milliseconds: 1000),
-              curve: Curves.elasticOut,
+              curve: Curves.easeInCubic,
             ),
             SizedBox(
               height: 50,
