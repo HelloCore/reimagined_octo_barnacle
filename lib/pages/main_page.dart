@@ -1,6 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:reimagined_octo_barnacle/pages/eigth_page.dart';
+import 'package:reimagined_octo_barnacle/pages/eleven_page.dart';
 import 'package:reimagined_octo_barnacle/pages/fifth_page.dart';
 import 'package:reimagined_octo_barnacle/pages/fourth_page.dart';
 import 'package:reimagined_octo_barnacle/pages/ninth_page.dart';
@@ -257,6 +258,24 @@ class _MainPageState extends State<MainPage> {
                     },
                     title: Text(
                         'FlutterAnimatedDefaultTextStyle.curves.elasticOut'),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  ElevenPage(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            return SharedAxisTransition(
+                              animation: animation,
+                              secondaryAnimation: secondaryAnimation,
+                              child: child,
+                              transitionType: SharedAxisTransitionType.vertical,
+                            );
+                          }));
+                    },
+                    title: Text('FlutterTextAnimation.TextLiquidFill'),
                   ),
                 ],
               ),
