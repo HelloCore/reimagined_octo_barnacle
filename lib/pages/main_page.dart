@@ -9,6 +9,7 @@ import 'package:reimagined_octo_barnacle/pages/second_page.dart';
 import 'package:reimagined_octo_barnacle/pages/seventh_page.dart';
 import 'package:reimagined_octo_barnacle/pages/six_page.dart';
 import 'package:reimagined_octo_barnacle/pages/ten_page.dart';
+import 'package:reimagined_octo_barnacle/pages/thirteen_page.dart';
 import 'package:reimagined_octo_barnacle/pages/twelve_page.dart';
 
 import 'third_page.dart';
@@ -296,6 +297,25 @@ class _MainPageState extends State<MainPage> {
                     },
                     title: Text(
                         'FlutterAnimatedDefaultTextStyle.curves.easeInCubic'),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  ThirteenPage(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            return SharedAxisTransition(
+                              animation: animation,
+                              secondaryAnimation: secondaryAnimation,
+                              child: child,
+                              transitionType: SharedAxisTransitionType.vertical,
+                            );
+                          }));
+                    },
+                    title: Text(
+                        'FlutterAnimatedDefaultTextStyle.curves.bounceOut'),
                   ),
                 ],
               ),
