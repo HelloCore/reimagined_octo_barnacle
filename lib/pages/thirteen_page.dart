@@ -11,7 +11,7 @@ class _ThirteenPageState extends State<ThirteenPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('thirteen'),
+        title: Text('Thirteen'),
       ),
       body: Center(
         child: Column(
