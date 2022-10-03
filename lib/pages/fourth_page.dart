@@ -15,14 +15,17 @@ class FourthPage extends StatelessWidget {
           color: Colors.greenAccent,
           child: SizedBox(
             width: 300,
-            child: FadeAnimatedTextKit(
-              text: ['Hello', 'Hello!!', 'Hello Hello Core!!!'],
-              textStyle: TextStyle(
-                fontSize: 40.0,
-                fontWeight: FontWeight.bold,
+            child: Hero(
+              tag: 'main-hero',
+              child: FadeAnimatedTextKit(
+                text: ['Hello', 'Hello!!', 'Hello Hello Core!!!'],
+                textStyle: TextStyle(
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
+                alignment: AlignmentDirectional.topStart,
               ),
-              textAlign: TextAlign.center,
-              alignment: AlignmentDirectional.topStart,
             ),
           ),
         ),

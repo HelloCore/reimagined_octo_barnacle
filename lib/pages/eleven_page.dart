@@ -12,15 +12,20 @@ class ElevenPage extends StatelessWidget {
         child: Center(
           child: SizedBox(
             width: 350.0,
-            child: TextLiquidFill(
-              text: 'LIQUIDY',
-              waveColor: Colors.blueAccent,
-              boxBackgroundColor: Colors.redAccent,
-              textStyle: TextStyle(
-                fontSize: 80.0,
-                fontWeight: FontWeight.bold,
+            child: Hero(
+              tag: 'main-hero',
+              child: Material(
+                child: TextLiquidFill(
+                  text: 'LIQUIDY',
+                  waveColor: Colors.blueAccent,
+                  boxBackgroundColor: Colors.redAccent,
+                  textStyle: TextStyle(
+                    fontSize: 80.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  boxHeight: 300.0,
+                ),
               ),
-              boxHeight: 300.0,
             ),
           ),
         ),
