@@ -12,6 +12,12 @@ class ThirdPage extends StatelessWidget {
         body: Center(
           child: Hero(
             tag: 'main-hero',
+            flightShuttleBuilder: ((flightContext, animation, flightDirection,
+                fromHeroContext, toHeroContext) {
+              return SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: toHeroContext.widget);
+            }),
             child: Container(
               width: 350,
               height: 300,
@@ -26,13 +32,13 @@ class ThirdPage extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        SizedBox(width: 20.0, height: 100.0),
+        SizedBox(width: 20.0),
         Text(
           'BE',
           style: TextStyle(
               fontSize: 43.0, fontFamily: 'Horizon', color: Colors.white),
         ),
-        SizedBox(width: 20.0, height: 100.0),
+        SizedBox(width: 20.0),
         RotateAnimatedTextKit(
           text: ['creative', 'awesome', 'different'],
           textStyle: TextStyle(
