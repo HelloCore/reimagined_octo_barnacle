@@ -31,17 +31,17 @@ class _MainPageState extends State<MainPage> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Hero(
-                tag: 'main-hero',
-                child: Material(
-                    child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Container(
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Hero(
+                  tag: 'main-hero',
+                  child: Material(
+                      child: Container(
                     width: 50,
                     height: 50,
                     color: Colors.greenAccent,
-                  ),
-                ))),
+                  ))),
+            ),
             Expanded(
               child: ListView(
                 children: [
